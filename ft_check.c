@@ -36,15 +36,6 @@ int	ft_check_visible(char *str, char largest, int size, int dir)
 	return (diff);
 }
 
-/*
-check if matches the input, if passes return 1 else 0
-str is the value to be test like "1234"
-front_input is where it counts from i = 0
-size_of_array is 4 for base question, up to 9 for bonus
-
-if row, front and back are left and right
-if col, front and back are top and bottom
-*/
 int	ft_check(char *str, int front_input, int back_input, int size_array)
 {
 	char	largest_front;
@@ -61,8 +52,6 @@ int	ft_check(char *str, int front_input, int back_input, int size_array)
 	return (0);
 }
 
-//Check the row number with the inputs for that row
-//Return 1 if passes, 0 if failed
 int	check_left_right(char *str_row, int size, char *argv, int row)
 {
 	char	left_input;
@@ -73,8 +62,6 @@ int	check_left_right(char *str_row, int size, char *argv, int row)
 	return (ft_check(str_row, left_input, right_input, size));
 }
 
-//Used for ft_diff_check_col
-//Return 0 if failed, 1 if passes
 int	check_one_top_bot(char *str, int size, int col, char *argv)
 {
 	char	top_input;
@@ -85,8 +72,7 @@ int	check_one_top_bot(char *str, int size, int col, char *argv)
 	return (ft_check(str, top_input, bot_input, size));
 }
 
-//Check if all inputs for col matches
-//return 1 if passes, 0 if failed
+
 int	check_top_bot(char *array, int size, char *argv)
 {
 	char	*str_col;
