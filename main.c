@@ -6,7 +6,7 @@
 /*   By: zheng <zheng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 10:52:47 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/23 13:54:56 by zheng            ###   ########.fr       */
+/*   Updated: 2026/07/23 14:19:45 by zheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,37 @@ void	set_row(char *str_row, char *arr, int row, int size)
 	}
 }
 
+void	set_last_row(char *arr, int size)
+{
+	int	element;
+	int check;
+	int	col;
+	int	i;
+
+	col = 0;
+	while (col < size)
+	{
+		element = 1;
+		check = 1;
+		while (check)
+		{
+			check = 0;
+			i = 0;
+			while (i <= size * (size - 1))
+			{
+				if (element == arr[i + col])
+				{
+					element++;
+					check = 1;
+				}
+				i += size;
+			}
+		}
+		arr[size * (size - 1) + col] = element;
+		col++;
+	}
+}
+
 //row set as 0 bt default
 int	solve(char *arr, char *argv, int size, int row)
 {
@@ -87,7 +118,11 @@ int	solve(char *arr, char *argv, int size, int row)
 
 	str_row = ft_str_row(row, arr, size);
 	if (row == size * (size - 1))
+	{
+		set_last_row(arr, size);
+		str_row = ft_str_row(row, arr, size);
 		return (check_left_right(str_row, size, argv, row) && check_top_bot(arr, size, argv));
+	}
 	init_first_permutation(arr, row, size);
 	while (1)
 	{
