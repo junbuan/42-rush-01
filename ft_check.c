@@ -6,7 +6,7 @@
 /*   By: zheng <zheng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 12:56:42 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/23 14:19:43 by zheng            ###   ########.fr       */
+/*   Updated: 2026/07/23 13:31:21 by zheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,25 +111,5 @@ int	check_top_bot(char *array, int size, char *argv)
 		col++;
 	}
 	free(str_col);
-	return (1);
-}
-
-int	check_element(char *array, int size, int row)
-{
-	int	col;
-	int	i_row;
-
-	col = 0;
-	while (col < size)
-	{
-		i_row = row - size + col;
-		while (i_row >= 0)
-		{
-			if (array[i_row] == array[row + col])
-				return (0);
-			i_row -= size;
-		}
-		col++;
-	}
 	return (1);
 }
