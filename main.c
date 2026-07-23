@@ -12,8 +12,6 @@
 
 #include "header.h"
 
-int	solve_check(char *arr, char *argv, int size, int row)
-
 //row set as 0 at start
 int	solve(char *arr, char *argv, int size, int row)
 {
@@ -27,15 +25,9 @@ int	solve(char *arr, char *argv, int size, int row)
 			&& check_element(arr, size, row))
 		{
 			if (row == size * (size - 1))
-			{
-				free(str_row);
-				return (check_top_bot(arr, size, argv));
-			}
+				return (free(str_row), check_top_bot(arr, size, argv));
 			if (solve(arr, argv, size, row + size))
-			{
-				free(str_row);
-				return (1);
-			}
+				return (free(str_row), 1);
 		}
 		if (is_last_comb(str_row, size))
 			break ;
