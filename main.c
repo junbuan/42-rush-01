@@ -6,7 +6,7 @@
 /*   By: zheng <zheng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 10:52:47 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/23 13:40:10 by zheng            ###   ########.fr       */
+/*   Updated: 2026/07/23 13:54:56 by zheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,14 +86,14 @@ int	solve(char *arr, char *argv, int size, int row)
 	char	*str_row;
 
 	str_row = ft_str_row(row, arr, size);
-	if (row == size - 1)
-		return (check_left_right(str_row, size, argv, row), check_top_bot(arr, size, argv));
+	if (row == size * (size - 1))
+		return (check_left_right(str_row, size, argv, row) && check_top_bot(arr, size, argv));
 	init_first_permutation(arr, row, size);
 	while (1)
 	{
 		if (check_left_right(str_row, size, argv, row) && check_element(arr, size, row))
 		{
-			if (solve(arr, argv, size, row + 1))
+			if (solve(arr, argv, size, row + size))
 				return (1);
 		}
 		if (is_last_comb(str_row, size))
