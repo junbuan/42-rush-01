@@ -6,7 +6,7 @@
 /*   By: zheng <zheng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 15:25:22 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/23 15:41:09 by zheng            ###   ########.fr       */
+/*   Updated: 2026/07/24 12:23:07 by juho             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	set_row(char *str_row, char *arr, int row, int size);
 int		check_element(char *array, int size, int row);
 void	ft_error(void);
 void	ft_print(char *array, int size);
+int		solve(char *arr, char *argv, int size, int row);
 
 #endif

@@ -11,21 +11,29 @@
 /* ************************************************************************** */
 #include "header.h"
 
+static int	validate_and_proceed(char *arr, char *argv, int size, int row)
+{
+	if (row == size * (size - 1))
+		return (check_top_bot(arr, size, argv));
+	return (solve(arr, argv, size, row + size));
+}
+
 int	solve(char *arr, char *argv, int size, int row)
 {
 	char	*str_row;
 
 	init_first_permutation(arr, row, size);
 	str_row = ft_str_row(row, arr, size);
-	while (1)
+	while (str_row)
 	{
 		if (check_left_right(str_row, size, argv, row)
 			&& check_element(arr, size, row))
 		{
-			if (row == size * (size - 1))
-				return (free(str_row), check_top_bot(arr, size, argv));
-			if (solve(arr, argv, size, row + size))
-				return (free(str_row), 1);
+			if (validate_and_proceed(arr, argv, size, row))
+			{
+				free(str_row);
+				return (1);
+			}
 		}
 		if (is_last_comb(str_row, size))
 			break ;
