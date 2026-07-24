@@ -72,7 +72,6 @@ int	check_one_top_bot(char *str, int size, int col, char *argv)
 	return (ft_check(str, top_input, bot_input, size));
 }
 
-
 int	check_top_bot(char *array, int size, char *argv)
 {
 	char	*str_col;

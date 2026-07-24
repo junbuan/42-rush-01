@@ -9,10 +9,8 @@
 /*   Updated: 2026/07/23 15:54:08 by zheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "header.h"
 
-//row set as 0 at start
 int	solve(char *arr, char *argv, int size, int row)
 {
 	char	*str_row;
