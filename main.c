@@ -6,10 +6,11 @@
 /*   By: juho <juho@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 10:52:47 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/26 13:25:46 by juho             ###   ########.fr       */
+/*   Updated: 2026/07/26 13:29:21 by juho             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "header.h"
 
 static int	validate_and_proceed(char *arr, char *argv, int size, int row)
 {
@@ -64,7 +65,7 @@ int	check(char *argv)
 	{
 		if (i % 2 && argv[i] != ' ')
 			return (0);
-		if (!(i % 2) && argv[i] < '0' || argv[i] > '9')
+		if (!(i % 2) && (argv[i] < '0' || argv[i] > '9'))
 			return (0);
 		i++;
 	}

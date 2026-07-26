@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zheng <zheng@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: juho <juho@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 12:56:42 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/23 13:31:21 by zheng            ###   ########.fr       */
+/*   Updated: 2026/07/26 13:28:31 by juho             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "header.h"
 
 int	ft_check_visible(char *str, char largest, int size, int dir)
 {
