@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zheng <zheng@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: juho <juho@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 10:52:47 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/23 15:54:08 by zheng            ###   ########.fr       */
+/*   Updated: 2026/07/26 12:18:03 by juho             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "header.h"
+
 
 static int	validate_and_proceed(char *arr, char *argv, int size, int row)
 {
