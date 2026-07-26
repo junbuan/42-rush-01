@@ -6,7 +6,7 @@
 /*   By: juho <juho@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 12:56:42 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/26 18:45:13 by juho             ###   ########.fr       */
+/*   Updated: 2026/07/26 19:09:30 by juho             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_check_visible(char *str, char largest, int size, int dir)
 			index = i;
 		else
 			index = size - 1 - i;
-		if (str[index] > largest)//clue
+		if (str[index] > largest)
 		{
 			largest = str[index];
 			count += 1;
