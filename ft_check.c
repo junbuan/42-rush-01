@@ -6,7 +6,7 @@
 /*   By: juho <juho@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 12:56:42 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/26 13:28:31 by juho             ###   ########.fr       */
+/*   Updated: 2026/07/26 18:45:13 by juho             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_check_visible(char *str, char largest, int size, int dir)
 {
-	int	diff;
+	int	count;
 	int	i;
 	int	index;
 
-	diff = 1;
+	count = 1;
 	i = 0;
 	while (i < size)
 	{
@@ -26,14 +26,14 @@ int	ft_check_visible(char *str, char largest, int size, int dir)
 			index = i;
 		else
 			index = size - 1 - i;
-		if (str[index] > largest)
+		if (str[index] > largest)//clue
 		{
 			largest = str[index];
-			diff += 1;
+			count += 1;
 		}
 		i++;
 	}
-	return (diff);
+	return (count);
 }
 
 int	ft_check(char *str, int front_input, int back_input, int size_array)

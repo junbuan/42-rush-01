@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_next_value.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juho <juho@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*   By: juho <juho@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/20 14:49:27 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/26 12:20:19 by juho             ###   ########.fr       */
+/*   Updated: 2026/07/26 18:45:07 by juho             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//used in ft_next_permutation
+#include "header.h"
+
 void	ft_swap(char *s1, char *s2)
 {
 	char	temp;
@@ -51,6 +52,8 @@ void	ft_next_permutation(char *out, int size)
 		}
 		index--;
 	}
+	//index = 2
+	//swapindex = 1
 	index = size - 1;
 	while (swap_index >= 0 && index >= 0)
 	{
