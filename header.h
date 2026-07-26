@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   header.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zheng <zheng@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: juho <juho@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 15:25:22 by zheng             #+#    #+#             */
-/*   Updated: 2026/07/24 12:23:07 by juho             ###   ########.fr       */
+/*   Updated: 2026/07/26 18:46:26 by juho             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int		check_left_right(char *str_row, int size, char *argv, int row);
 int		check_top_bot(char *array, int size, char *argv);
 int		check_element(char *array, int size, int row);
-int		ft_next_permutation(char *out, int size);
+void	ft_next_permutation(char *out, int size);
 int		is_last_comb(char *str_row, int size);
 int		ft_strlen(char *str);
 char	*ft_str_row(int row, char *arr, int size);
